@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espaço entre as imagens */
+    width: 100%;
+    max-width: 960px;
+    padding: 40px 0;
+    flex-wrap: nowrap; /* Impede que as imagens quebrem para a linha seguinte */
+}
+
+.image-btn {
+    width: auto;
+    flex-shrink: 0; /* Impede que as imagens diminuam para caber na tela */
+}
+
+.image-btn img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+
+.image-btn img:hover {
+    transform: scale(1.1);
+}
+
+/* Ajuste responsivo para telas menores */
+@media (max-width: 960px) {
+    .image-btn {
+        width: calc(50% - 10px); /* Duas imagens por linha em telas menores */
+    }
+}
